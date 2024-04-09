@@ -1,0 +1,151 @@
+{
+    "users": [],
+    "categories": [
+        {
+            "id": 1,
+            "name": "2022"
+        },
+        {
+            "id": 2,
+            "name": "2023"
+        },
+        {
+            "id": 3,
+            "name": "2024"
+        }
+    ],
+    "movies": [
+        {
+            "id": 1,
+            "title": "The Batman",
+            "imageUrl": "",
+            "categoryId": 1,
+            "userId": null,
+            "category": {
+                "id": 1,
+                "name": "2022"
+            }
+        },
+        {
+            "id": 2,
+            "title": "Top Gun : Maverick",
+            "imageUrl": "",
+            "categoryId": 1,
+            "userId": null,
+            "category": {
+                "id": 1,
+                "name": "2022"
+            }
+        },
+        {
+            "id": 3,
+            "title": "Avatar - The Way of water",
+            "imageUrl": "",
+            "categoryId": 1,
+            "userId": null,
+            "category": {
+                "id": 1,
+                "name": "2022"
+            }
+        },
+        {
+            "id": 4,
+            "title": "Babylon",
+            "imageUrl": "",
+            "categoryId": 1,
+            "userId": null,
+            "category": {
+                "id": 1,
+                "name": "2022"
+            }
+        },
+        {
+            "id": 5,
+            "title": "Black Panther: Wakanda Forever",
+            "imageUrl": "",
+            "categoryId": 1,
+            "userId": null,
+            "category": {
+                "id": 1,
+                "name": "2022"
+            }
+        },
+        {
+            "id": 6,
+            "title": "Spider-Man : Across The Spider-Verse",
+            "imageUrl": "",
+            "categoryId": 2,
+            "userId": null,
+            "category": {
+                "id": 2,
+                "name": "2023"
+            }
+        },
+        {
+            "id": 7,
+            "title": "Oppenheimer",
+            "imageUrl": "",
+            "categoryId": 2,
+            "userId": null,
+            "category": {
+                "id": 2,
+                "name": "2023"
+            }
+        },
+        {
+            "id": 8,
+            "title": "Gran Turismo",
+            "imageUrl": "",
+            "categoryId": 2,
+            "userId": null,
+            "category": {
+                "id": 2,
+                "name": "2023"
+            }
+        },
+        {
+            "id": 9,
+            "title": "The Hunger Games : The Ballad of Songbirds & Snakes",
+            "imageUrl": "",
+            "categoryId": 2,
+            "userId": null,
+            "category": {
+                "id": 2,
+                "name": "2023"
+            }
+        },
+        {
+            "id": 10,
+            "title": "The Super Mario Bros",
+            "imageUrl": "",
+            "categoryId": 2,
+            "userId": null,
+            "category": {
+                "id": 2,
+                "name": "2023"
+            }
+        },
+        {
+            "id": 11,
+            "title": "Dune : Part Two",
+            "imageUrl": "",
+            "categoryId": 3,
+            "userId": null,
+            "category": {
+                "id": 3,
+                "name": "2024"
+            }
+        },
+        {
+            "id": 12,
+            "title": "Kung Fu Panda 4",
+            "imageUrl": "",
+            "categoryId": 3,
+            "userId": null,
+            "category": {
+                "id": 3,
+                "name": "2024"
+            }
+        }
+    ]
+}

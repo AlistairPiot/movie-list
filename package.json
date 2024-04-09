@@ -1,0 +1,13 @@
+{
+    "name": "movie-list",
+    "packageManager": "yarn@4.1.1",
+    "scripts": {
+        "watch:sass": "sass --watch ./assets/sass/main.scss:assets/styles/index.css"
+    },
+    "dependencies": {
+        "json-server": "^1.0.0-alpha.23"
+    },
+    "devDependencies": {
+        "sass": "^1.74.1"
+    }
+}
