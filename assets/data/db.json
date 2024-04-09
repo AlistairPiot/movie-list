@@ -18,7 +18,7 @@
         {
             "id": 1,
             "title": "The Batman",
-            "imageUrl": "",
+            "imageUrl": "../assets/images/the-batman.jpg",
             "categoryId": 1,
             "userId": null,
             "category": {
@@ -29,7 +29,7 @@
         {
             "id": 2,
             "title": "Top Gun : Maverick",
-            "imageUrl": "",
+            "imageUrl": "../assets/images/top-gun-maverick.jpg",
             "categoryId": 1,
             "userId": null,
             "category": {
@@ -40,7 +40,7 @@
         {
             "id": 3,
             "title": "Avatar - The Way of water",
-            "imageUrl": "",
+            "imageUrl": "../assets/images/the-batman.jpg",
             "categoryId": 1,
             "userId": null,
             "category": {
@@ -51,7 +51,7 @@
         {
             "id": 4,
             "title": "Babylon",
-            "imageUrl": "",
+            "imageUrl": "../assets/images/the-batman.jpg",
             "categoryId": 1,
             "userId": null,
             "category": {
@@ -62,7 +62,7 @@
         {
             "id": 5,
             "title": "Black Panther: Wakanda Forever",
-            "imageUrl": "",
+            "imageUrl": "../assets/images/the-batman.jpg",
             "categoryId": 1,
             "userId": null,
             "category": {
@@ -73,7 +73,7 @@
         {
             "id": 6,
             "title": "Spider-Man : Across The Spider-Verse",
-            "imageUrl": "",
+            "imageUrl": "../assets/images/the-batman.jpg",
             "categoryId": 2,
             "userId": null,
             "category": {
@@ -84,7 +84,7 @@
         {
             "id": 7,
             "title": "Oppenheimer",
-            "imageUrl": "",
+            "imageUrl": "../assets/images/the-batman.jpg",
             "categoryId": 2,
             "userId": null,
             "category": {
@@ -95,7 +95,7 @@
         {
             "id": 8,
             "title": "Gran Turismo",
-            "imageUrl": "",
+            "imageUrl": "../assets/images/the-batman.jpg",
             "categoryId": 2,
             "userId": null,
             "category": {
@@ -106,7 +106,7 @@
         {
             "id": 9,
             "title": "The Hunger Games : The Ballad of Songbirds & Snakes",
-            "imageUrl": "",
+            "imageUrl": "../assets/images/the-batman.jpg",
             "categoryId": 2,
             "userId": null,
             "category": {
@@ -117,7 +117,7 @@
         {
             "id": 10,
             "title": "The Super Mario Bros",
-            "imageUrl": "",
+            "imageUrl": "../assets/images/the-batman.jpg",
             "categoryId": 2,
             "userId": null,
             "category": {
@@ -128,7 +128,7 @@
         {
             "id": 11,
             "title": "Dune : Part Two",
-            "imageUrl": "",
+            "imageUrl": "../assets/images/the-batman.jpg",
             "categoryId": 3,
             "userId": null,
             "category": {
@@ -139,7 +139,7 @@
         {
             "id": 12,
             "title": "Kung Fu Panda 4",
-            "imageUrl": "",
+            "imageUrl": "../assets/images/the-batman.jpg",
             "categoryId": 3,
             "userId": null,
             "category": {

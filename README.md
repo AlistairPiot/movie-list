@@ -9,7 +9,7 @@ yarn add json-server
 ### To check that the backend is running with the following command :
 
 ```bash
-yarn json-server --watch data/db.json
+yarn json-server --watch assets/data/db.json
 ```
 
 ## Sass :
