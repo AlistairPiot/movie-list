@@ -18,8 +18,9 @@
         color: #f1f1f1;
     }
     .gallery {
+        width: 100%;
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(21rem, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
         gap: 6rem;
         margin: 2rem 0;
         background-color: #202127;
@@ -34,7 +35,8 @@
                 font-weight: bold;
             }
             .imgStyle {
-                height: 100%;
+                border: 2px solid #f1f1f1;
+                height: 20rem;
                 width: 100%;
                 object-fit: cover;
                 border-radius: 1rem;

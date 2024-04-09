@@ -27,5 +27,5 @@ sass assets/sass/main.scss assets/styles/index.css
 ### Script watch Sass in :
 
 ```bash
-    "watch:sass": "sass --watch ./assets/sass/main.scss:assets/styles/index.css"
+"watch:sass": "sass --watch ./assets/sass/main.scss:assets/styles/index.css"
 ```
