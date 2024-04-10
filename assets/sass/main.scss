@@ -9,8 +9,17 @@
 
 .body {
     position: relative;
-    margin: 0 4rem;
+    margin: 0 10rem;
     background-color: #88939e;
+    @media (max-width: 1600px) {
+        margin: 0 4rem;
+    }
+    @media (max-width: 1024px) {
+        margin: 0 2rem;
+    }
+    @media (max-width: 768px) {
+        margin: 0rem;
+    }
     .header {
         text-align: center;
         padding: 1rem;
@@ -20,27 +29,65 @@
     .gallery {
         width: 100%;
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
         gap: 6rem;
         margin: 2rem 0;
         background-color: #202127;
         padding: 2rem;
         padding-bottom: 10rem;
-
+        @media (max-width: 1600px) {
+            grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+            gap: 6rem;
+        }
+        @media (max-width: 1024px) {
+            grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+        }
+        @media (max-width: 768px) {
+            grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+            gap: 4rem;
+        }
+        @media (max-width: 280px) {
+            grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+            gap: 3rem;
+        }
         .figureStyle {
             color: #f1f1f1;
             text-align: center;
             .figcaptionStyle {
-                font-size: 1.5rem;
+                font-size: 1.6rem;
                 font-weight: bold;
+                @media (max-width: 1024px) {
+                    font-size: 1.4rem;
+                }
+                @media (max-width: 768px) {
+                    font-size: 1.2rem;
+                }
+                @media (max-width: 480px) {
+                    font-size: 1rem;
+                }
             }
             .imgStyle {
                 border: 2px solid #f1f1f1;
-                height: 20rem;
+                height: 18rem;
                 width: 100%;
                 object-fit: cover;
                 border-radius: 1rem;
                 margin-bottom: 0.5rem;
+                @media (max-width: 1600px) {
+                    height: 16rem;
+                }
+                @media (max-width: 1024px) {
+                    height: 14rem;
+                }
+                @media (max-width: 768px) {
+                    height: 12rem;
+                }
+                @media (max-width: 480px) {
+                    height: 10rem;
+                }
+                @media (max-width: 280px) {
+                    height: 8rem;
+                }
             }
         }
     }

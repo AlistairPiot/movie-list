@@ -9,8 +9,23 @@
 
 .body {
   position: relative;
-  margin: 0 4rem;
+  margin: 0 10rem;
   background-color: #88939e;
+}
+@media (max-width: 1600px) {
+  .body {
+    margin: 0 4rem;
+  }
+}
+@media (max-width: 1024px) {
+  .body {
+    margin: 0 2rem;
+  }
+}
+@media (max-width: 768px) {
+  .body {
+    margin: 0rem;
+  }
 }
 .body .header {
   text-align: center;
@@ -21,28 +36,91 @@
 .body .gallery {
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
   gap: 6rem;
   margin: 2rem 0;
   background-color: #202127;
   padding: 2rem;
   padding-bottom: 10rem;
 }
+@media (max-width: 1600px) {
+  .body .gallery {
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    gap: 6rem;
+  }
+}
+@media (max-width: 1024px) {
+  .body .gallery {
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  }
+}
+@media (max-width: 768px) {
+  .body .gallery {
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    gap: 4rem;
+  }
+}
+@media (max-width: 280px) {
+  .body .gallery {
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+    gap: 3rem;
+  }
+}
 .body .gallery .figureStyle {
   color: #f1f1f1;
   text-align: center;
 }
 .body .gallery .figureStyle .figcaptionStyle {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   font-weight: bold;
+}
+@media (max-width: 1024px) {
+  .body .gallery .figureStyle .figcaptionStyle {
+    font-size: 1.4rem;
+  }
+}
+@media (max-width: 768px) {
+  .body .gallery .figureStyle .figcaptionStyle {
+    font-size: 1.2rem;
+  }
+}
+@media (max-width: 480px) {
+  .body .gallery .figureStyle .figcaptionStyle {
+    font-size: 1rem;
+  }
 }
 .body .gallery .figureStyle .imgStyle {
   border: 2px solid #f1f1f1;
-  height: 20rem;
+  height: 18rem;
   width: 100%;
   object-fit: cover;
   border-radius: 1rem;
   margin-bottom: 0.5rem;
+}
+@media (max-width: 1600px) {
+  .body .gallery .figureStyle .imgStyle {
+    height: 16rem;
+  }
+}
+@media (max-width: 1024px) {
+  .body .gallery .figureStyle .imgStyle {
+    height: 14rem;
+  }
+}
+@media (max-width: 768px) {
+  .body .gallery .figureStyle .imgStyle {
+    height: 12rem;
+  }
+}
+@media (max-width: 480px) {
+  .body .gallery .figureStyle .imgStyle {
+    height: 10rem;
+  }
+}
+@media (max-width: 280px) {
+  .body .gallery .figureStyle .imgStyle {
+    height: 8rem;
+  }
 }
 .body .footer {
   display: flex;
