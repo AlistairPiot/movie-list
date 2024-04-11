@@ -15,7 +15,7 @@ yarn json-server --watch assets/data/db.json
 ## Sass :
 
 ```bash
-yarn add -D sass
+yarn add sass
 ```
 
 ### Sass compilation :
