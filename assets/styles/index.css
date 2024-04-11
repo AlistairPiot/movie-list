@@ -89,6 +89,17 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 1rem;
+}
+@media (max-width: 480px) {
+  .body .home .filters {
+    gap: 0.8rem;
+  }
+}
+@media (max-width: 280px) {
+  .body .home .filters {
+    gap: 0.2rem;
+  }
 }
 .body .home .filters__btn {
   background-color: var(--main-bg-color);
@@ -105,7 +116,7 @@
 }
 @media (max-width: 280px) {
   .body .home .filters__btn {
-    font-size: 0.8rem;
+    font-size: 0.6rem;
   }
 }
 .body .home .gallery {
