@@ -1,3 +1,6 @@
+const gallery = document.querySelector(".gallery");
+const filters = document.querySelector(".filters");
+
 async function getMovies() {
     const response = await fetch("http://localhost:3000/movies");
     return await response.json();
@@ -5,23 +8,27 @@ async function getMovies() {
 getMovies();
 
 async function displayMovies() {
-    const gallery = document.querySelector(".gallery");
     const arrayMovies = await getMovies();
     arrayMovies.forEach((movie) => {
-        const figure = document.createElement("figure");
-        const img = document.createElement("img");
-        const figcaption = document.createElement("figcaption");
-        img.src = movie.imageUrl;
-        figcaption.textContent = movie.title;
-        figure.classList.add("figureStyle");
-        figcaption.classList.add("figcaptionStyle");
-        img.classList.add("imgStyle");
-        figure.appendChild(img);
-        figure.appendChild(figcaption);
-        gallery.appendChild(figure);
+        createMovies(movie);
     });
 }
 displayMovies();
+
+async function createMovies(movie) {
+    const figure = document.createElement("figure");
+    const img = document.createElement("img");
+    const figcaption = document.createElement("figcaption");
+    img.src = movie.imageUrl;
+    figcaption.textContent = movie.title;
+    figure.classList.add("figureStyle");
+    figcaption.classList.add("figcaptionStyle");
+    img.classList.add("imgStyle");
+    figure.appendChild(img);
+    figure.appendChild(figcaption);
+    gallery.appendChild(figure);
+}
+createMovies();
 
 async function getCategories() {
     const response = await fetch("http://localhost:3000/categories");
@@ -31,14 +38,35 @@ getCategories();
 
 async function displayCategories() {
     const categories = await getCategories();
-    const filters = document.querySelector(".filters");
-    console.log(categories);
     categories.forEach((category) => {
         const btn = document.createElement("button");
         btn.classList.add("filters__btn");
-        btn.textContent = category.name.toUpperCase();
+        btn.textContent = category.name;
         btn.id = category.id;
         filters.appendChild(btn);
     });
 }
 displayCategories();
+
+async function filterCategories() {
+    const gallery = document.querySelector(".gallery");
+    const movieList = await getMovies();
+    const buttons = document.querySelectorAll(".filters button");
+    buttons.forEach((button) => {
+        button.addEventListener("click", (e) => {
+            btnId = e.target.id;
+            gallery.innerHTML = "";
+            if (btnId !== "0") {
+                const movieFilterCategory = movieList.filter((movie) => {
+                    return movie.categoryId == btnId;
+                });
+                movieFilterCategory.forEach((movie) => {
+                    createMovies(movie);
+                });
+            } else {
+                displayMovies();
+            }
+        });
+    });
+}
+filterCategories();

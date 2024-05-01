@@ -1,5 +1,6 @@
 .body-login {
     position: relative;
+    margin: 0 10rem;
     min-height: 100vh;
     padding-bottom: 10rem;
     background-color: var(--body-bg-color);
@@ -33,14 +34,20 @@
                     font-size: 1.6rem;
                     padding: 0.4rem 1.4rem;
                     border-radius: 1rem;
+                    &__link {
+                        color: var(--main-color);
+                    }
+                    &:hover {
+                        background-color: var(--main-color);
+                        .nav__ul__li__link {
+                            color: var(--main-bg-color);
+                        }
+                    }
                     @media (max-width: 480px) {
                         font-size: 1rem;
                     }
                     @media (max-width: 280px) {
                         font-size: 0.8rem;
-                    }
-                    &__link {
-                        color: var(--main-color);
                     }
                 }
             }
