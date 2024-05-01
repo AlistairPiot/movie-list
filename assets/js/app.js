@@ -28,7 +28,6 @@ async function createMovies(movie) {
     figure.appendChild(figcaption);
     gallery.appendChild(figure);
 }
-createMovies();
 
 async function getCategories() {
     const response = await fetch("http://localhost:3000/categories");
@@ -70,3 +69,19 @@ async function filterCategories() {
     });
 }
 filterCategories();
+
+// If the user is logged in
+const loged = window.sessionStorage.loged;
+const admin = document.querySelector("header nav .admin");
+const logout = document.querySelector("header nav .logout");
+
+if (loged == "true") {
+    admin.textContent = "Admin";
+    logout.textContent = "Logout";
+    logout.addEventListener("click", () => {
+        window.sessionStorage.loged = false;
+    });
+} else {
+    const adminLink = document.querySelector(".admin");
+    adminLink.remove();
+}

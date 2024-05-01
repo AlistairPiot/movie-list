@@ -26,29 +26,25 @@
             }
         }
         .nav {
-            &__ul {
+            ul {
                 display: flex;
                 gap: 2rem;
-                &__li {
+                a {
+                    color: var(--main-color);
                     border: 2px solid var(--main-color);
                     font-size: 1.6rem;
                     padding: 0.4rem 1.4rem;
                     border-radius: 1rem;
-                    &__link {
-                        color: var(--main-color);
-                    }
-                    &:hover {
-                        background-color: var(--main-color);
-                        .nav__ul__li__link {
-                            color: var(--main-bg-color);
-                        }
-                    }
-                    @media (max-width: 480px) {
-                        font-size: 1rem;
-                    }
-                    @media (max-width: 280px) {
-                        font-size: 0.8rem;
-                    }
+                }
+                a:hover {
+                    background-color: var(--main-color);
+                    color: var(--main-bg-color);
+                }
+                @media (max-width: 480px) {
+                    font-size: 1rem;
+                }
+                @media (max-width: 280px) {
+                    font-size: 0.8rem;
                 }
             }
         }
@@ -86,6 +82,10 @@
                     margin-bottom: 1rem;
                     font-size: 2rem;
                 }
+            }
+            .errorMessage {
+                color: red;
+                font-size: 1.6rem;
             }
             .form {
                 position: relative;

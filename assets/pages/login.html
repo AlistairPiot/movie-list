@@ -7,22 +7,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Movie List Login</title>
     <link rel="stylesheet" href="../styles/index.css">
+    <script src="../js/login.js" defer></script>
 </head>
 
 <body class="body-login">
     <header class="header">
         <h1 class="header__title">Movie List</h1>
         <nav class="nav">
-            <ul class="nav__ul">
-                <li class="nav__ul__li"><a class="nav__ul__li__link" href="../../index.html">Home</a></li>
-                <li class="nav__ul__li"><a class="nav__ul__li__link" href="#" class="logout">Login</a>
-                </li>
+            <ul>
+                <a class="logout" href="../../index.html">Home</a>
+                <a class="admin" href="#" class="logout">Login</a>
             </ul>
         </nav>
     </header>
     <main class="main">
         <div class="login">
             <h2 class="title">Log in</h2>
+            <p class="errorMessage"></p>
             <form class="form" action="submit">
                 <label class="label" for="email">E-mail</label>
                 <input type="password" id="email">

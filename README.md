@@ -24,8 +24,13 @@ yarn add sass
 sass assets/sass/main.scss assets/styles/index.css
 ```
 
-### Script watch Sass in :
+### Script watch Sass :
 
 ```bash
 "watch:sass": "sass --watch ./assets/sass/main.scss:assets/styles/index.css"
 ```
+
+## For identification :
+
+-   "email" : movielist.contact@gmail.com
+-   "password" : movielist

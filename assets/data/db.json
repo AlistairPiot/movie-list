@@ -1,5 +1,12 @@
 {
-    "users": [],
+    "users": [
+        {
+            "id": 1,
+            "email": "movielist.contact@gmail.com",
+            "password": "movielist",
+            "admin": true
+        }
+    ],
     "categories": [
         {
             "id": 1,
