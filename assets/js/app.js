@@ -1,6 +1,3 @@
-const gallery = document.querySelector(".gallery");
-const filters = document.querySelector(".filters");
-
 async function getMovies() {
     const response = await fetch("http://localhost:3000/movies");
     return await response.json();
@@ -16,6 +13,7 @@ async function displayMovies() {
 displayMovies();
 
 async function createMovies(movie) {
+    const gallery = document.querySelector(".gallery");
     const figure = document.createElement("figure");
     const img = document.createElement("img");
     const figcaption = document.createElement("figcaption");
@@ -36,6 +34,7 @@ async function getCategories() {
 getCategories();
 
 async function displayCategories() {
+    const filters = document.querySelector(".filters");
     const categories = await getCategories();
     categories.forEach((category) => {
         const btn = document.createElement("button");
@@ -70,18 +69,45 @@ async function filterCategories() {
 }
 filterCategories();
 
-// If the user is logged in
-const loged = window.sessionStorage.loged;
-const admin = document.querySelector("header nav .admin");
-const logout = document.querySelector("header nav .logout");
-
-if (loged == "true") {
-    admin.textContent = "Admin";
-    logout.textContent = "Logout";
-    logout.addEventListener("click", () => {
-        window.sessionStorage.loged = false;
-    });
-} else {
-    const adminLink = document.querySelector(".admin");
-    adminLink.remove();
+function userLogged() {
+    const loged = window.sessionStorage.loged;
+    const admin = document.querySelector("header nav .admin");
+    const logout = document.querySelector("header nav .logout");
+    if (loged == "true") {
+        admin.textContent = "Admin";
+        logout.textContent = "Logout";
+        logout.addEventListener("click", () => {
+            window.sessionStorage.loged = false;
+        });
+    } else {
+        const adminLink = document.querySelector(".admin");
+        adminLink.remove();
+    }
 }
+userLogged();
+
+function openModal() {
+    const admin = document.querySelector("header nav .admin");
+    const modalContainer = document.querySelector(".modalContainer");
+
+    admin.addEventListener("click", () => {
+        modalContainer.style.display = "flex";
+    });
+}
+openModal();
+
+function closeModal() {
+    const modalContainer = document.querySelector(".modalContainer");
+    const xmark = document.querySelector(".xmark-close");
+
+    xmark.addEventListener("click", () => {
+        modalContainer.style.display = "none";
+    });
+
+    modalContainer.addEventListener("click", (e) => {
+        if (e.target.className == "modalContainer") {
+            modalContainer.style.display = "none";
+        }
+    });
+}
+closeModal();

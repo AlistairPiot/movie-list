@@ -1,0 +1,45 @@
+.modalContainer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: hsla(231, 10%, 14%, 0.5);
+    .modalMovieList {
+        position: relative;
+        background-color: var(--body-bg-color);
+        width: 50%;
+        height: 50%;
+        border-radius: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        .fa-xmark {
+            cursor: pointer;
+            position: absolute;
+            top: 2rem;
+            right: 2rem;
+            font-size: 2rem;
+        }
+        h2 {
+            font-size: 2.5rem;
+        }
+        button {
+            cursor: pointer;
+            border: 2px solid var(--main-color);
+            background-color: var(--main-bg-color);
+            color: var(--main-color);
+            font-size: 1.6rem;
+            padding: 0.4rem 1.4rem;
+            border-radius: 1rem;
+        }
+        button:hover {
+            background-color: var(--main-color);
+            color: var(--main-bg-color);
+        }
+    }
+}
