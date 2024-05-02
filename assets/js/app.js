@@ -116,20 +116,46 @@ async function modalDisplayMovies() {
     const contentMovieList = document.querySelector(".contentMovieList");
     contentMovieList.innerHTML = "";
     const movieList = await getMovies();
-    console.log(movieList);
     movieList.forEach((movie) => {
         const figure = document.createElement("figure");
         const img = document.createElement("img");
         const span = document.createElement("span");
         const trash = document.createElement("i");
         trash.classList.add("fa-solid", "fa-trash-can");
-        trash.id = movie.id;
+        span.id = movie.id;
         img.src = movie.imageUrl;
         span.appendChild(trash);
         figure.appendChild(span);
         figure.appendChild(img);
         contentMovieList.appendChild(figure);
     });
-    console.log(contentMovieList);
+    deleteMovie();
 }
 modalDisplayMovies();
+
+function deleteMovie() {
+    const trashAll = document.querySelectorAll(".contentMovieList figure span");
+    trashAll.forEach((trash) => {
+        trash.addEventListener("click", async () => {
+            try {
+                const id = trash.id;
+                const response = await fetch(
+                    "http://localhost:3000/movies/" + id,
+                    {
+                        method: "DELETE",
+                        headers: { "Content-type": "application/json" },
+                    }
+                );
+                if (response.ok) {
+                    alert("Suppression worked");
+                    modalDisplayMovies();
+                    displayMovies();
+                } else {
+                    console.log(response.statusText);
+                }
+            } catch (error) {
+                console.log("The delete didn't work", error);
+            }
+        });
+    });
+}
