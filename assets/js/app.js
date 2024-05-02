@@ -111,3 +111,25 @@ function closeModal() {
     });
 }
 closeModal();
+
+async function modalDisplayMovies() {
+    const contentMovieList = document.querySelector(".contentMovieList");
+    contentMovieList.innerHTML = "";
+    const movieList = await getMovies();
+    console.log(movieList);
+    movieList.forEach((movie) => {
+        const figure = document.createElement("figure");
+        const img = document.createElement("img");
+        const span = document.createElement("span");
+        const trash = document.createElement("i");
+        trash.classList.add("fa-solid", "fa-trash-can");
+        trash.id = movie.id;
+        img.src = movie.imageUrl;
+        span.appendChild(trash);
+        figure.appendChild(span);
+        figure.appendChild(img);
+        contentMovieList.appendChild(figure);
+    });
+    console.log(contentMovieList);
+}
+modalDisplayMovies();

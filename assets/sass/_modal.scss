@@ -11,13 +11,14 @@
     .modalMovieList {
         position: relative;
         background-color: var(--body-bg-color);
-        width: 50%;
-        height: 50%;
+        width: 60%;
+        height: 80%;
         border-radius: 1rem;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: space-around;
+        padding: 1rem 0;
         .fa-xmark {
             cursor: pointer;
             position: absolute;
@@ -26,11 +27,11 @@
             font-size: 2rem;
         }
         h2 {
-            font-size: 2.5rem;
+            font-size: 3rem;
         }
         button {
             cursor: pointer;
-            border: 2px solid var(--main-color);
+            border: none;
             background-color: var(--main-bg-color);
             color: var(--main-color);
             font-size: 1.6rem;
@@ -40,6 +41,67 @@
         button:hover {
             background-color: var(--main-color);
             color: var(--main-bg-color);
+        }
+        .contentMovieList {
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+            gap: 3rem;
+            margin: 1rem 0;
+            padding: 4rem 2rem;
+            overflow-y: scroll;
+            @media (max-width: 1600px) {
+                grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+                gap: 6rem;
+            }
+            @media (max-width: 1024px) {
+                grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+            }
+            @media (max-width: 768px) {
+                grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+                gap: 4rem;
+            }
+            @media (max-width: 280px) {
+                grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+                gap: 3rem;
+            }
+            figure {
+                position: relative;
+                color: var(--main-color);
+                text-align: center;
+                span {
+                    position: absolute;
+                    top: 0.5rem;
+                    right: 0.5rem;
+                    background-color: var(--main-bg-color);
+                    padding: 0.4rem;
+                    border-radius: 0.4rem;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: 1.2rem;
+                }
+                img {
+                    border: 2px solid var(--main-color);
+                    height: 10rem;
+                    width: 100%;
+                    object-fit: cover;
+                    border-radius: 1rem;
+                    margin-bottom: 0.5rem;
+                    @media (max-width: 1600px) {
+                        height: 16rem;
+                    }
+                    @media (max-width: 1024px) {
+                        height: 14rem;
+                    }
+                    @media (max-width: 768px) {
+                        height: 12rem;
+                    }
+                    @media (max-width: 280px) {
+                        height: 8rem;
+                    }
+                }
+            }
         }
     }
 }
