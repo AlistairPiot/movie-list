@@ -1,158 +1,158 @@
 {
-    "users": [
-        {
-            "id": "1",
-            "email": "movielist.contact@gmail.com",
-            "password": "movielist",
-            "admin": true
-        }
-    ],
-    "categories": [
-        {
-            "id": "1",
-            "name": "2022"
-        },
-        {
-            "id": "2",
-            "name": "2023"
-        },
-        {
-            "id": "3",
-            "name": "2024"
-        }
-    ],
-    "movies": [
-        {
-            "id": "1",
-            "title": "The Batman",
-            "imageUrl": "../assets/images/the-batman.jpg",
-            "categoryId": 1,
-            "userId": null,
-            "category": {
-                "id": 1,
-                "name": "2022"
-            }
-        },
-        {
-            "id": "2",
-            "title": "Top Gun : Maverick",
-            "imageUrl": "../assets/images/top-gun-maverick.jpg",
-            "categoryId": 1,
-            "userId": null,
-            "category": {
-                "id": 1,
-                "name": "2022"
-            }
-        },
-        {
-            "id": "3",
-            "title": "Avatar - The Way of water",
-            "imageUrl": "../assets/images/avatar-the-way-of-water.jpg",
-            "categoryId": 1,
-            "userId": null,
-            "category": {
-                "id": 1,
-                "name": "2022"
-            }
-        },
-        {
-            "id": "4",
-            "title": "Babylon",
-            "imageUrl": "../assets/images/babylon.jpg",
-            "categoryId": 1,
-            "userId": null,
-            "category": {
-                "id": 1,
-                "name": "2022"
-            }
-        },
-        {
-            "id": "5",
-            "title": "Black Panther: Wakanda Forever",
-            "imageUrl": "../assets/images/black-panther-2.jpeg",
-            "categoryId": 1,
-            "userId": null,
-            "category": {
-                "id": 1,
-                "name": "2022"
-            }
-        },
-        {
-            "id": "6",
-            "title": "Spider-Man : Across The Spider-Verse",
-            "imageUrl": "../assets/images/spider-man-accross-the-spider-verse.jpg",
-            "categoryId": 2,
-            "userId": null,
-            "category": {
-                "id": 2,
-                "name": "2023"
-            }
-        },
-        {
-            "id": "7",
-            "title": "Oppenheimer",
-            "imageUrl": "../assets/images/oppenheimer.jpg",
-            "categoryId": 2,
-            "userId": null,
-            "category": {
-                "id": 2,
-                "name": "2023"
-            }
-        },
-        {
-            "id": "8",
-            "title": "Gran Turismo",
-            "imageUrl": "../assets/images/gran-turismo.webp",
-            "categoryId": 2,
-            "userId": null,
-            "category": {
-                "id": 2,
-                "name": "2023"
-            }
-        },
-        {
-            "id": "9",
-            "title": "The Hunger Games : The Ballad of Songbirds & Snakes",
-            "imageUrl": "../assets/images/hunger-games-the-ballad.jpeg",
-            "categoryId": 2,
-            "userId": null,
-            "category": {
-                "id": 2,
-                "name": "2023"
-            }
-        },
-        {
-            "id": "10",
-            "title": "The Super Mario Bros",
-            "imageUrl": "../assets/images/super-mario-bros.jpeg",
-            "categoryId": 2,
-            "userId": null,
-            "category": {
-                "id": 2,
-                "name": "2023"
-            }
-        },
-        {
-            "id": "11",
-            "title": "Dune : Part Two",
-            "imageUrl": "../assets/images/dune-2.jpeg",
-            "categoryId": 3,
-            "userId": null,
-            "category": {
-                "id": 3,
-                "name": "2024"
-            }
-        },
-        {
-            "id": 12,
-            "title": "Kung Fu Panda 4",
-            "imageUrl": "../assets/images/kung-fu-panda-4.jpeg",
-            "categoryId": 3,
-            "userId": null,
-            "category": {
-                "id": 3,
-                "name": "2024"
-            }
-        }
-    ]
+  "users": [
+    {
+      "id": "1",
+      "email": "movielist.contact@gmail.com",
+      "password": "movielist",
+      "admin": true
+    }
+  ],
+  "categories": [
+    {
+      "id": "1",
+      "name": "2022"
+    },
+    {
+      "id": "2",
+      "name": "2023"
+    },
+    {
+      "id": "3",
+      "name": "2024"
+    }
+  ],
+  "movies": [
+    {
+      "id": "1",
+      "title": "The Batman",
+      "imageUrl": "../assets/images/the-batman.jpg",
+      "categoryId": 1,
+      "userId": null,
+      "category": {
+        "id": 1,
+        "name": "2022"
+      }
+    },
+    {
+      "id": "2",
+      "title": "Top Gun : Maverick",
+      "imageUrl": "../assets/images/top-gun-maverick.jpg",
+      "categoryId": 1,
+      "userId": null,
+      "category": {
+        "id": 1,
+        "name": "2022"
+      }
+    },
+    {
+      "id": "3",
+      "title": "Avatar - The Way of water",
+      "imageUrl": "../assets/images/avatar-the-way-of-water.jpg",
+      "categoryId": 1,
+      "userId": null,
+      "category": {
+        "id": 1,
+        "name": "2022"
+      }
+    },
+    {
+      "id": "4",
+      "title": "Babylon",
+      "imageUrl": "../assets/images/babylon.jpg",
+      "categoryId": 1,
+      "userId": null,
+      "category": {
+        "id": 1,
+        "name": "2022"
+      }
+    },
+    {
+      "id": "5",
+      "title": "Black Panther: Wakanda Forever",
+      "imageUrl": "../assets/images/black-panther-2.jpeg",
+      "categoryId": 1,
+      "userId": null,
+      "category": {
+        "id": 1,
+        "name": "2022"
+      }
+    },
+    {
+      "id": "6",
+      "title": "Spider-Man : Across The Spider-Verse",
+      "imageUrl": "../assets/images/spider-man-accross-the-spider-verse.jpg",
+      "categoryId": 2,
+      "userId": null,
+      "category": {
+        "id": 2,
+        "name": "2023"
+      }
+    },
+    {
+      "id": "7",
+      "title": "Oppenheimer",
+      "imageUrl": "../assets/images/oppenheimer.jpg",
+      "categoryId": 2,
+      "userId": null,
+      "category": {
+        "id": 2,
+        "name": "2023"
+      }
+    },
+    {
+      "id": "8",
+      "title": "Gran Turismo",
+      "imageUrl": "../assets/images/gran-turismo.webp",
+      "categoryId": 2,
+      "userId": null,
+      "category": {
+        "id": 2,
+        "name": "2023"
+      }
+    },
+    {
+      "id": "9",
+      "title": "The Hunger Games : The Ballad of Songbirds & Snakes",
+      "imageUrl": "../assets/images/hunger-games-the-ballad.jpeg",
+      "categoryId": 2,
+      "userId": null,
+      "category": {
+        "id": 2,
+        "name": "2023"
+      }
+    },
+    {
+      "id": "10",
+      "title": "The Super Mario Bros",
+      "imageUrl": "../assets/images/super-mario-bros.jpeg",
+      "categoryId": 2,
+      "userId": null,
+      "category": {
+        "id": 2,
+        "name": "2023"
+      }
+    },
+    {
+      "id": "11",
+      "title": "Dune : Part Two",
+      "imageUrl": "../assets/images/dune-2.jpeg",
+      "categoryId": 3,
+      "userId": null,
+      "category": {
+        "id": 3,
+        "name": "2024"
+      }
+    },
+    {
+      "id": "12",
+      "title": "Kung Fu Panda 4",
+      "imageUrl": "../assets/images/kung-fu-panda-4.jpeg",
+      "categoryId": 3,
+      "userId": null,
+      "category": {
+        "id": 3,
+        "name": "2024"
+      }
+    }
+  ]
 }

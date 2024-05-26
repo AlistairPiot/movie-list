@@ -2,7 +2,8 @@
     "name": "movie-list",
     "packageManager": "yarn@4.1.1",
     "scripts": {
-        "watch:sass": "sass --watch ./assets/sass/main.scss:assets/styles/index.css"
+        "watch:sass": "sass --watch ./assets/sass/main.scss:assets/styles/index.css",
+        "server:start": "yarn json-server --watch assets/data/db.json"
     },
     "dependencies": {
         "json-server": "^1.0.0-alpha.23",

@@ -38,6 +38,27 @@
             <div class="contentMovieList"></div>
             <button>Add a movie</button>
         </div>
+        <div class="modalAddMovie">
+            <span class="arrow-left"><i class="fa-solid fa-arrow-left"></i></span>
+            <span class="xmark-close"><i class="fa-solid fa-xmark"></i></span>
+            <h2>Add movie</h2>
+            <form>
+                <div class="containerFile">
+                    <span>
+                        <i class="fa-regular fa-image"></i>
+                    </span>
+                    <label for="file">Add picture</label>
+                    <input type="file" id="file" name="image">
+                    <img src="#" alt="Image preview">
+                    <p>jpg,png: 4mo max</p>
+                </div>
+                <label for="title">Titre</label>
+                <input type="text" id="title" name="title">
+                <label for="category">Category</label>
+                <select name="category" id="category"></select>
+                <button class="button" disabled>Confirm</button>
+            </form>
+        </div>
     </div>
     <footer class="footer">
         <h2>Alistair Piot</h2>
