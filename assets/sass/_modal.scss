@@ -16,18 +16,35 @@
         border-radius: 1rem;
         display: flex;
         flex-direction: column;
-        align-items: center;
         justify-content: space-around;
-        padding: 1rem 0;
-        .fa-xmark {
-            cursor: pointer;
-            position: absolute;
-            top: 2rem;
-            right: 2rem;
-            font-size: 2rem;
+        align-items: center;
+        padding-bottom: 1rem;
+        @media (max-width: 1024px) {
+            width: 80%;
         }
-        h2 {
-            font-size: 3rem;
+        @media (max-width: 768px) {
+            width: 90%;
+        }
+        .modal-header {
+            display: flex;
+            align-items: center;
+            font-size: 2rem;
+            h2 {
+                padding: 0;
+                margin-top: 1.3rem;
+                font-size: 2.5rem;
+                @media (max-width: 768px) {
+                    font-size: 2.2rem;
+                    margin-top: 1.5rem;
+                }
+            }
+            .fa-xmark {
+                cursor: pointer;
+                position: absolute;
+                top: 2rem;
+                right: 2rem;
+                font-size: 2rem;
+            }
         }
         button {
             cursor: pointer;
@@ -37,6 +54,9 @@
             font-size: 1.6rem;
             padding: 0.4rem 1.4rem;
             border-radius: 1rem;
+            @media (max-width: 768px) {
+                font-size: 1.4rem;
+            }
         }
         button:hover {
             background-color: var(--main-color);
@@ -52,18 +72,19 @@
             overflow-y: scroll;
             @media (max-width: 1600px) {
                 grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
-                gap: 6rem;
+                gap: 3rem;
             }
             @media (max-width: 1024px) {
-                grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+                grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+                gap: 2rem;
             }
             @media (max-width: 768px) {
                 grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
-                gap: 4rem;
+                gap: 2rem;
             }
             @media (max-width: 280px) {
                 grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
-                gap: 3rem;
+                gap: 2rem;
             }
             figure {
                 position: relative;
@@ -89,16 +110,16 @@
                     border-radius: 1rem;
                     margin-bottom: 0.5rem;
                     @media (max-width: 1600px) {
-                        height: 16rem;
+                        height: 8rem;
                     }
                     @media (max-width: 1024px) {
-                        height: 14rem;
+                        height: 8rem;
                     }
                     @media (max-width: 768px) {
-                        height: 12rem;
+                        height: 8rem;
                     }
                     @media (max-width: 280px) {
-                        height: 8rem;
+                        height: 6rem;
                     }
                 }
             }

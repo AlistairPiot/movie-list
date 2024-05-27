@@ -89,7 +89,6 @@ userLogged();
 function openModal() {
     const admin = document.querySelector("header nav .admin");
     const modalContainer = document.querySelector(".modalContainer");
-
     admin.addEventListener("click", () => {
         modalContainer.style.display = "flex";
     });
@@ -99,11 +98,9 @@ openModal();
 function closeModal() {
     const modalContainer = document.querySelector(".modalContainer");
     const xmark = document.querySelector(".xmark-close");
-
     xmark.addEventListener("click", () => {
         modalContainer.style.display = "none";
     });
-
     modalContainer.addEventListener("click", (e) => {
         if (e.target.className == "modalContainer") {
             modalContainer.style.display = "none";
@@ -160,14 +157,13 @@ function deleteMovie() {
     });
 }
 
-const btnAddMovie = document.querySelector(".modalMovieList button");
-const modalAddMovie = document.querySelector(".modalAddMovie");
-const modalMovie = document.querySelector(".modalMovieList");
-const arrowleft = document.querySelector(".modalAddMovie .arrow-left");
-const xmark = document.querySelector(".modalAddMovie .xmark-close");
-const modalContainer = document.querySelector(".modalContainer");
-
 function displayAddModal() {
+    const btnAddMovie = document.querySelector(".modalMovieList button");
+    const modalAddMovie = document.querySelector(".modalAddMovie");
+    const modalMovie = document.querySelector(".modalMovieList");
+    const arrowleft = document.querySelector(".modalAddMovie .arrow-left");
+    const xmark = document.querySelector(".modalAddMovie .xmark-close");
+    const modalContainer = document.querySelector(".modalContainer");
     btnAddMovie.addEventListener("click", () => {
         modalAddMovie.style.display = "flex";
         modalMovie.style.display = "none";
@@ -182,26 +178,28 @@ function displayAddModal() {
 }
 displayAddModal();
 
-const previewImg = document.querySelector(".containerFile img");
-const inputFile = document.querySelector(".containerFile input");
-const labelFile = document.querySelector(".containerFile label");
-const iconFile = document.querySelector(".containerFile span");
-const pFile = document.querySelector(".containerFile p");
-
-inputFile.addEventListener("change", () => {
-    const file = inputFile.files[0];
-    if (file) {
-        const reader = new FileReader();
-        reader.onload = function (e) {
-            previewImg.src = e.target.result;
-            previewImg.style.display = "flex";
-            iconFile.style.display = "none";
-            labelFile.style.display = "none";
-            pFile.style.display = "none";
-        };
-        reader.readAsDataURL(file);
-    }
-});
+function inputFileChange() {
+    const previewImg = document.querySelector(".containerFile img");
+    const inputFile = document.querySelector(".containerFile input");
+    const labelFile = document.querySelector(".containerFile label");
+    const iconFile = document.querySelector(".containerFile span");
+    const pFile = document.querySelector(".containerFile p");
+    inputFile.addEventListener("change", () => {
+        const file = inputFile.files[0];
+        if (file) {
+            const reader = new FileReader();
+            reader.onload = function (e) {
+                previewImg.src = e.target.result;
+                previewImg.style.display = "flex";
+                iconFile.style.display = "none";
+                labelFile.style.display = "none";
+                pFile.style.display = "none";
+            };
+            reader.readAsDataURL(file);
+        }
+    });
+}
+inputFileChange();
 
 async function displayCateogyModal() {
     const select = document.querySelector(".modalAddMovie select");
@@ -215,51 +213,53 @@ async function displayCateogyModal() {
 }
 displayCateogyModal();
 
-const form = document.querySelector(".modalAddMovie form");
-const title = document.querySelector(".modalAddMovie #title");
-const category = document.querySelector(".modalAddMovie #category");
-form.addEventListener("submit", async (e) => {
-    e.preventDefault();
-    const formData = {
-        title: title.value,
-        categoryId: category.value,
-        imageUrl: previewImg.src,
-        category: {
-            id: category.value,
-            name: category.options[category.selectedIndex].textContent,
-        },
-    };
-
-    try {
-        const response = await fetch("http://localhost:3000/movies", {
-            method: "POST",
-            body: JSON.stringify(formData),
-            headers: {
-                "Content-Type": "application/json",
+function modalAddMovieSubmit() {
+    const category = document.querySelector(".modalAddMovie #category");
+    const form = document.querySelector(".modalAddMovie form");
+    const title = document.querySelector(".modalAddMovie #title");
+    const previewImg = document.querySelector(".containerFile img");
+    form.addEventListener("submit", async (e) => {
+        e.preventDefault();
+        const formData = {
+            title: title.value,
+            categoryId: category.value,
+            imageUrl: previewImg.src,
+            category: {
+                id: category.value,
+                name: category.options[category.selectedIndex].textContent,
             },
-        });
+        };
 
-        if (!response.ok) {
-            throw new Error(`Error: ${response.statusText}`);
+        try {
+            const response = await fetch("http://localhost:3000/movies", {
+                method: "POST",
+                body: JSON.stringify(formData),
+                headers: {
+                    "Content-Type": "application/json",
+                },
+            });
+            if (!response.ok) {
+                throw new Error(`Error: ${response.statusText}`);
+            }
+            const data = await response.json();
+            console.log("Here is the film added", data);
+            await DisplayMoviesModal();
+            await displayMovies();
+        } catch (error) {
+            console.error("Failed to add the movie:", error);
         }
-
-        const data = await response.json();
-        console.log("Here is the film added", data);
-
-        // Refresh the displayed movies
-        await DisplayMoviesModal();
-        await displayMovies();
-    } catch (error) {
-        console.error("Failed to add the movie:", error);
-    }
-});
+    });
+}
+modalAddMovieSubmit();
 
 function verifyFormCompleted() {
     const buttonValidForm = document.querySelector(
         ".modalAddMovie form button"
     );
     const form = document.querySelector(".modalAddMovie form");
-
+    const title = document.querySelector(".modalAddMovie #title");
+    const category = document.querySelector(".modalAddMovie #category");
+    const inputFile = document.querySelector(".containerFile input");
     form.addEventListener("input", () => {
         if (
             !title.value == "" &&

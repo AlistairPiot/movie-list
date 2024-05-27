@@ -1,6 +1,6 @@
 .body-login {
     position: relative;
-    margin: 0 10rem;
+    margin: 0 2rem;
     min-height: 100vh;
     padding-bottom: 10rem;
     background-color: var(--body-bg-color);
@@ -133,6 +133,7 @@
                     }
                     @media (max-width: 768px) {
                         font-size: 0.8rem;
+                        width: 40%;
                     }
                     @media (max-width: 280px) {
                         font-size: 0.6rem;
