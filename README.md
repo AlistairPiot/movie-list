@@ -1,6 +1,6 @@
 # Movie List
 
-![Home du site Movie List](./assets/images/cover-github.png)
+![Home page cover Movie List](./assets/images/cover-github.png)
 
 ## Json server :
 
